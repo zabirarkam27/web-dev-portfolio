@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mary Hardy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fdf2e9;
+        }
+
+        /* Container and layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #fd6e0a;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero section */
+        .hero {
+            background-color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: 'Developer';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4rem;
+            color: #f0ebe7;
+            writing-mode: vertical-rl;
+            text-align: right;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: #fd6e0a;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .cta-buttons .btn-primary {
+            background-color: #fd6e0a;
+            color: #fff;
+        }
+
+        .cta-buttons .btn-secondary {
+            border: 2px solid #fd6e0a;
+            color: #fd6e0a;
+        }
+
+        .hero img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        /* About section */
+        .about {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-info {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .about-info p {
+            margin-bottom: 10px;
+        }
+
+        /* Skills section */
+        .skills {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .skills-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: #fff;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Resume section */
+        .resume {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .resume h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .resume-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .resume-section {
+            background-color: #fff;
+            width: 48%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #fd6e0a;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        <div class="logo">Mar<span>y</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <h1>Hi, I am <span>Mary Hardy</span></h1>
+        <p>Shot what able cold new see hold. Friendly as an betrayed formerly he. Morning because as to society behaved moments.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn-primary">Download CV</a>
+            <a href="#" class="btn-secondary">Contact</a>
+        </div>
+        <img src="https://via.placeholder.com/150" alt="Mary Hardy">
+    </section>
+
+    <!-- About section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="about-info">
+            <p>I’m a designer & developer with a passion for web design. I enjoy developing simple, clean, and slick websites.</p>
+            <p><strong>Name:</strong> Mary Hardy | <strong>Email:</strong> info@gmail.com</p>
+            <p><strong>Date of birth:</strong> 11 November 1987 | <strong>From:</strong> Los Angeles, USA</p>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills">
+        <h2>What I Do</h2>
+        <div class="skills-cards">
+            <div class="skill-card">
+                <h3>Vanilla JavaScript</h3>
+                <p>Details about JS skillset...</p>
+            </div>
+            <div class="skill-card">
+                <h3>React</h3>
+                <p>Details about React skillset...</p>
+            </div>
+            <div class="skill-card">
+                <h3>Node.js</h3>
+                <p>Details about Node.js skillset...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume section -->
+    <section class="resume">
+        <h2>A Summary of My Resume</h2>
+        <div class="resume-columns">
+            <div class="resume-section">
+                <h3>My Education</h3>
+                <p>Master in Computer Engineering<br>Harvard University | 2015-2017</p>
+            </div>
+            <div class="resume-section">
+                <h3>My Experience</h3>
+                <p>Sr. Front End Developer<br>Apple Inc | 2020-Current</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact">
+        <h2>Let's Message Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Your email" required>
+            <textarea placeholder="Your message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>
